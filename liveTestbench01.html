@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" href="main.css">
+<head>
+    <meta charset="UTF-8" />
+    <title>gearSearch</title>
+    
+</head>
+<script>
+function ebaySearch(){
+window.open(`https://www.ebay.com/sch/i.html?_nkw=${finderInput.value}&_sacat=0&_from=R40&_trksid=p4432023.m570.l1313`).focus();
+}
+function reverbSearch(){
+    window.open(`https://reverb.com/marketplace?query=${finderInput.value}`).focus();
+}
+
+function craigslistSearch(){
+    window.open(`https://seattle.craigslist.org/search/msa?query=${finderInput.value}#search=1~gallery~0~0`).focus();
+}
+
+function multiSearch(){
+        var w1 = window.open(`https://www.ebay.com/sch/i.html?_nkw=${finderInput.value}&_sacat=0&_from=R40&_trksid=p4432023.m570.l1313`, '1').focus();
+        var w2 = window.open(`https://reverb.com/marketplace?query=${finderInput.value}`,'2').focus();
+        var w3 = window.open(`https://seattle.craigslist.org/search/msa?query=${finderInput.value}#search=1~gallery~0~0`,'3').focus();}
+
+</script>
+
+
+
+<body> 
+    <h3>Multisite Gear Search</h3>
+    <input type="search" id="finderInput"></input><br>
+</body>    <button type="button" id=ebayButton onclick="ebaySearch(finderInput.value)">ebaySearch</button>
+           <button type="button" id=reverbButton onclick="reverbSearch(finderInput.value)">reverbSearch</button>
+           <button type="button" id=craigslistButton onclick="craigslistSearch(finderInput.value)">craigslistSearch</button>
+ <p> This is my supergood website.  It'z prolly better than yourz.</p>
+</body>
+</html>
